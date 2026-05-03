@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CASE Consultants</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #111;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h2 {
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    /* HERO */
+    header {
+      position: relative;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    header img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* CARD */
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px;
+    }
+
+    .card p {
+      margin: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>CASE Consultants</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header>
+  <img src="assets/hero.jpg" alt="CASE Consultants">
+  <h1>Advanced Structural Engineering Solutions</h1>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    CASE Consultants is a leading engineering firm specializing in advanced structural
+    analysis and design. We provide high-fidelity solutions for structures subjected
+    to extreme loading conditions including earthquake, blast, fire, and multi-hazard environments.
+  </p>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <h2>Our Services</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Blast Engineering</h3>
+      <p>Simulation and design for structures subjected to explosive loads.</p>
+    </div>
+
+    <div class="card">
+      <h3>Earthquake Engineering</h3>
+      <p>Nonlinear seismic analysis and performance-based design.</p>
+    </div>
+
+    <div class="card">
+      <h3>Fire Engineering</h3>
+      <p>Thermal-structural analysis for fire safety and resilience.</p>
+    </div>
+
+    <div class="card">
+      <h3>Advanced Simulation</h3>
+      <p>Multi-physics modeling and digital twin development.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Selected Projects</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <img src="assets/project1.jpg">
+      <h3>Residential Facade Engineering</h3>
+    </div>
+
+    <div class="card">
+      <img src="assets/project2.jpg">
+      <h3>High-Rise Structural Analysis</h3>
+    </div>
+
+    <div class="card">
+      <img src="assets/project3.jpg">
+      <h3>Urban Tower Development</h3>
+    </div>
+
+    <div class="card">
+      <img src="assets/project4.jpg">
+      <h3>Green Building Systems</h3>
+    </div>
+
+    <div class="card">
+      <img src="assets/project5.jpg">
+      <h3>Interior Structural Design</h3>
+    </div>
+
+    <div class="card">
+      <img src="assets/project6.jpg">
+      <h3>Mixed-Use Development</h3>
+    </div>
+
+    <div class="card">
+      <img src="assets/project7.jpg">
+      <h3>Architectural Terrace Design</h3>
+    </div>
+
+    <div class="card">
+      <img src="assets/project8.jpg">
+      <h3>Conceptual Twin Towers</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p style="text-align:center;">
+    Email: info@case-consultants.com<br>
+    Website: case-consultants.com
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 CASE Consultants</p>
+</footer>
+
+</body>
+</html>
