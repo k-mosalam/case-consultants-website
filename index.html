@@ -9,107 +9,131 @@
 * { box-sizing: border-box; }
 
 body {
-  margin:0;
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color:#222;
+  color: #222;
+  line-height: 1.6;
+  background: #f7f7f7;
 }
 
-/* NAVBAR */
 nav {
-  background:#10233f;
-  color:white;
-  padding:15px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  background: #10233f;
+  color: white;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  font-size:1.8rem;
-  font-weight:700;
-  letter-spacing:3px;
-  color:#f2b705;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #f2b705;
 }
 
 nav a {
-  color:white;
-  text-decoration:none;
-  margin-left:20px;
-  font-size:0.95rem;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
 }
 
-/* HERO */
 header {
-  height:70vh;
+  min-height: 75vh;
   background:
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url('assets/hero.jpg') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  text-align:center;
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("assets/hero.jpg") center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
 }
 
 header h1 {
-  font-size:3rem;
+  font-size: 3rem;
+  max-width: 850px;
 }
 
-/* SECTIONS */
 section {
-  padding:50px 40px;
-  max-width:1100px;
-  margin:auto;
+  padding: 60px 8%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 h2 {
-  text-align:center;
-  margin-bottom:25px;
+  text-align: center;
+  color: #10233f;
+  margin-bottom: 25px;
 }
 
-/* GRID */
+.intro {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+}
+
 .grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
 
-/* CARDS */
 .card {
-  border:1px solid #ddd;
-  border-radius:8px;
-  overflow:hidden;
-  background:white;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.10);
 }
 
 .card img {
-  width:100%;
-  height:200px;
-  object-fit:cover;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
 }
 
-/* CONTACT */
+.card h3 {
+  margin: 16px;
+  color: #10233f;
+  font-size: 1.05rem;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border-top: 5px solid #f2b705;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
 .contact {
-  text-align:center;
+  background: #10233f;
+  color: white;
+  text-align: center;
+  max-width: none;
 }
 
-/* FOOTER */
+.contact h2 {
+  color: white;
+}
+
 footer {
-  background:#10233f;
-  color:white;
-  text-align:center;
-  padding:20px;
+  background: #071426;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-/* MOBILE */
-@media (max-width:700px){
+@media (max-width: 700px) {
   nav {
-    flex-direction:column;
-    gap:10px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   header h1 {
-    font-size:2rem;
+    font-size: 2rem;
   }
 }
 </style>
@@ -117,61 +141,76 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <div class="logo">CASE</div>
-
   <div>
     <a href="#about">About</a>
+    <a href="#services">Services</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <header>
   <h1>Advanced Structural Engineering Solutions</h1>
 </header>
 
-<!-- ABOUT -->
 <section id="about">
-  <h2>About</h2>
-  <p style="text-align:center;">
-    CASE Consultants provides advanced structural engineering services for complex
-    buildings and infrastructure systems.
+  <h2>About CASE Consultants</h2>
+  <p class="intro">
+    CASE Consultants provides structural engineering, advanced analysis,
+    design review, and consulting services for complex buildings and
+    infrastructure projects.
   </p>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <h2>Projects</h2>
-
+<section id="services">
+  <h2>Our Services</h2>
   <div class="grid">
-
-    <div class="card"><img src="assets/project1.jpg"></div>
-    <div class="card"><img src="assets/project2.jpg"></div>
-    <div class="card"><img src="assets/project3.jpg"></div>
-    <div class="card"><img src="assets/project4.jpg"></div>
-    <div class="card"><img src="assets/project5.jpg"></div>
-    <div class="card"><img src="assets/project6.jpg"></div>
-    <div class="card"><img src="assets/project7.jpg"></div>
-    <div class="card"><img src="assets/project8.jpg"></div>
-
+    <div class="service-card">
+      <h3>Structural Design</h3>
+      <p>Design and review of reinforced concrete, steel, and mixed structural systems.</p>
+    </div>
+    <div class="service-card">
+      <h3>Seismic Engineering</h3>
+      <p>Earthquake-resistant design, nonlinear analysis, and performance evaluation.</p>
+    </div>
+    <div class="service-card">
+      <h3>Construction Support</h3>
+      <p>Engineering coordination, technical review, and construction-related solutions.</p>
+    </div>
+    <div class="service-card">
+      <h3>Advanced Analysis</h3>
+      <p>Specialized computational modeling for complex and high-rise structures.</p>
+    </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<section id="projects">
+  <h2>Selected Projects</h2>
+  <div class="grid">
+    <div class="card"><img src="assets/project1.jpg" alt="Project 1"><h3>Residential Facade Engineering</h3></div>
+    <div class="card"><img src="assets/project2.jpg" alt="Project 2"><h3>High-Rise Structural Analysis</h3></div>
+    <div class="card"><img src="assets/project3.jpg" alt="Project 3"><h3>Urban Tower Development</h3></div>
+    <div class="card"><img src="assets/project4.jpg" alt="Project 4"><h3>Green Building Systems</h3></div>
+    <div class="card"><img src="assets/project5.jpg" alt="Project 5"><h3>Interior Structural Design</h3></div>
+    <div class="card"><img src="assets/project6.jpg" alt="Project 6"><h3>Mixed-Use Development</h3></div>
+    <div class="card"><img src="assets/project7.jpg" alt="Project 7"><h3>Architectural Terrace Design</h3></div>
+    <div class="card"><img src="assets/project8.jpg" alt="Project 8"><h3>Conceptual Twin Towers</h3></div>
+  </div>
+</section>
+
 <section id="contact" class="contact">
   <h2>Contact</h2>
   <p>
+    CASE Consultants<br>
     Email: info@case-consultants.com<br>
     Website: case-consultants.com
   </p>
 </section>
 
-<!-- FOOTER -->
 <footer>
-© 2026 CASE Consultants
+  © 2026 CASE Consultants. All rights reserved.
 </footer>
 
 </body>
